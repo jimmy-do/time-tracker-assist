@@ -2,8 +2,7 @@ package com.infosys.bnsf.timetrackerassist.controller;
 
 import com.infosys.bnsf.timetrackerassist.exceptions.ResourceNotFoundException;
 import com.infosys.bnsf.timetrackerassist.model.Task;
-import com.infosys.bnsf.timetrackerassist.model.Task;
-import com.infosys.bnsf.timetrackerassist.service.TasksService;
+import com.infosys.bnsf.timetrackerassist.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +15,7 @@ import java.util.List;
 public class TaskController {
 
     @Autowired
-    private TasksService service;
+    private TaskService service;
 
     @GetMapping("/task/findall")
     public ResponseEntity<List<Task>> findAllTasks() {
